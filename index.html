@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Conscious Product Reviews</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .navbar {
+            display: flex;
+            background-color: #008a63;
+            justify-content: space-around;
+            padding: 10px;
+            color: white;
+        }
+        .navbar a {
+            color: #fff; /* Change link color to white for better contrast */
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+        }
+        /* Update section colors for better contrast */
+        #home { background-color: #ffffff; }
+        #products { background-color: #ffffff; }
+        #about { background-color: #ffffff; }
+        #contact { background-color: #ffffff; }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#" onclick="navigate('home')">Home</a>
+    <a href="#" onclick="navigate('products')">Products</a>
+    <a href="#" onclick="navigate('about')">About Us</a>
+    <a href="#" onclick="navigate('contact')">Contact Us</a>
+</div>
+
+<section id="home">
+    <h1>Welcome to Eco-Conscious Product Reviews</h1>
+    <p>Discover the best eco-friendly products for a sustainable lifestyle.</p>
+</section>
+
+<section id="products">
+    <h1>Our Products</h1>
+    <p>Explore our curated list of eco-conscious products.</p>
+</section>
+
+<section id="about">
+    <h1>About Us</h1>
+    <p>Learn more about our mission to promote sustainability.</p>
+</section>
+
+<section id="contact">
+    <h1>Contact Us</h1>
+    <p>Get in touch with us for more information.</p>
+</section>
+
+<script>
+    function navigate(sectionId) {
+        // Hide all sections
+        document.querySelectorAll('section').forEach(function(section) {
+            section.style.display = 'none';
+        });
+        
+        // Show the selected section
+        document.getElementById(sectionId).style.display = 'block';
+    }
+
+    // Show the home section by default
+    navigate('home');
+</script>
+
+</body>
+</html>
